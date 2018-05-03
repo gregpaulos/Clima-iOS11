@@ -145,6 +145,8 @@ class WeatherViewController: UIViewController, CLLocationManagerDelegate, change
     //Write the userEnteredANewCityName Delegate method here:
     func userEnteredNewCityName(city: String) {
         print(city)
+        let params : [String : String] = ["q": city, "appid": APP_ID]
+        getWeatherData(url: WEATHER_URL, parameters: params)
          }
 
     
